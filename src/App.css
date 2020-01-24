@@ -1,38 +1,165 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,800&display=swap');
+
+body {
+  background: #c1cd97;
+  font-family: 'Poppins', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button {
+  background: #f3ddb3;
+  border: none;
+  padding: 8px;
+  font-family: 'Poppins', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button:hover:not(:disabled) {
+  cursor: pointer;
+  outline: 2px solid #E18D96;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+button:disabled {
+  cursor: not-allowed;
+}
+
+.app-container {
+  height: 100vh;
+  margin: 0 20%;
+  background: #eee;
+  padding: 0 16px;
+}
+
+.app-header {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+}
+
+.user-score {
+  display: flex;
+}
+
+.user-score h2 { 
+  margin: auto; 
+  text-align: center; 
+}
+.mode-container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.mode-btn {
+  display: block;
+  font-size: 16px;
+}
+
+.mic-input {
+  display: flex;
+}
+
+.mic-input button {
+  font-size: 32px;
+  margin: 16px 0;
+}
+
+.mic-checkbox {
+  display: block;
+}
+
+.mic {
+  margin-right: 16px;
+  width: calc(100% - 48px)
+}
+
+.submit-container {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.submit-btn {
+  width: 100%;
+  padding: 32px 0;
+  font-size: 32px;
+  margin-top: 32px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.text-input {
+  width: calc(100% - 16px);
+  border: none;
+  background: none;
+  border-bottom: 4px solid #e16d96;
+  font-size: 32px;
+  font-family: 'Poppins', sans-serif;
+  margin: 32px 0;
+  padding: 8px;
+}
+
+.text-input:focus {
+  outline: none;
+}
+
+.searching-placeholder {
+  width: 100%;
+  text-align: center;
+  font-size: 48px;
+}
+
+.no-track, .player-loading {
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+}
+
+.track-info {
+  width: 100%;
+  text-align: center;
+  font-size: 32px;
+}
+
+.response-buttons-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.response-buttons-container button {
+  margin-top: 16px;
+  padding: 16px;
+  font-size: 48px;
+}
+
+.gameover-container, .error-container {
+  width: 100%;
+  text-align: center;
+  font-size: 48px;
+}
+
+.gameover-container div {
+  font-size: 32px;
+}
+
+.gameover-container button, .error-container button {
+  width: 100%;
+  padding: 32px 0;
+  font-size: 32px;
+}
+
+.app-footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+}
+
+@media (max-width: 812px) { 
+    .app-container {
+      margin: 0;
+    }
+
+    .gameover-container {
+      font-size: 32px;
+    }
+
+    .gameover-container div {
+      font-size: 16px;
+    }
 }
